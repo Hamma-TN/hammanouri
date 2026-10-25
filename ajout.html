@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mesStyle1.css">
+    <script src="mescontrols.js"></script>
+</head>
+<body>
+    <form action="liste.php" method="post" onsubmit="return valid1()">
+        <fieldset>
+            <legend>
+                ajout d'un bijou
+            </legend>
+            <fieldset>
+                <legend>
+                    détails
+                </legend>
+                <table>
+                    <tr>
+                        <td>identifiant : </td>
+                        <td><input type="text" name="idbij" id="idt" required></td>
+                    </tr>
+                    <tr>
+                        <td>description : </td>
+                        <td><input type="text" name="description" id="dpt" maxlength="100" required></td>
+                    </tr>
+                    <tr>
+                        <td>prix de vente : </td>
+                        <td><input type="number" name="prixvent" id="pv" min="100" required> dinars</td>
+                    </tr>
+                    <tr>
+                        <td>poids : </td>
+                        <td><input type="number" name="poids" id="pd" value="1" min="1" required>gramme(s)</td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    composition
+                </legend>
+                <input type="checkbox" name="composition[]" value="A" id="btn1">argent
+                <input type="checkbox" name="composition[]" value="O" id="btn2">or
+                <input type="checkbox" name="composition[]" value="P" id="btn3">platine
+            </fieldset>
+            <table>
+                <tr>
+                    <td></td>
+                    <td><input type="reset" value="annuler">
+                        <input type="submit" value="enregitrer"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>

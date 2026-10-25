@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mesStyle1.css">
+    <script src="mescontrols.js"></script>
+</head>
+<body>
+    <form action="enregistrer_evaluation.php" method="post" onsubmit="return valid2()">
+        <fieldset>
+        <legend>evaluation d'un bijou</legend>
+        <table>
+            <tr>
+                <td>identifiant du bijou : </td>
+                <td><input type="text" name="idbij" id="idt" required></td>
+            </tr>
+            <tr>
+                <td>expert : </td>
+                <td>
+                    <select name="idExp" id="exp" required>
+                        <option value="">choisir un expert</option>
+                        <option value="A22">chokri sfaxi</option>
+                        <option value="A23">mohamed jerbi</option>
+                        <option value="A24">radhia gafsi</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <fieldset>
+            <legend>critéres déévaluation</legend>
+            <table>
+                <tr>
+                    <td>finition : </td>
+                    <td><input type="number" name="finition" id="fin" min="1" max="5" required></td>
+                </tr>
+                <tr>
+                    <td>originalité : </td>
+                    <td><label><input type="radio" name="originalite" value="O" id="btn1" required> oui</label>
+                        <label><input type="radio" name="originalite" value="N" id="btn2"> non</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>commentaire : </td>
+                    <td><input type="text" name="commentaire" id="com" maxlength="200" required></td>
+                </tr>
+            </table>
+        </fieldset>
+        <input type="submit" value="enregitrer" >
+        <input type="reset" value="annuler">
+    </fieldset>
+    </form>
+</body>
+</html>
